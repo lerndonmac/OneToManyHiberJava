@@ -32,12 +32,11 @@ public class Prog {
             putevka.setNomber("yersg");
             putevka.setDateOfImport("uydtg");
             putevka.setDatoOfExport("kshegrfg");
-            putevka.setHostelCode(daoHostl.read(1));
-            putevka.setTuroperator(daoTuroperator.read(1));
-            putevka.setTuristCode(daoTurist.read(1));
+            putevka.setHostelCode(daoHostl.read((int)((Math.random())*4)+1));
+            putevka.setTuroperator(daoTuroperator.read((int)((Math.random())*4)+1));
+            putevka.setTuristCode(daoTurist.read((int)((Math.random())*4)+1));
 
             dao.create(putevka);
-            System.out.println(dao.read(5));
         } finally {
             if (factory != null){factory.close();}
 
